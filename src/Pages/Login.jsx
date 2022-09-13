@@ -5,20 +5,25 @@ import {FaFacebook} from "react-icons/fa"
 import {BsGithub} from "react-icons/bs"
 
 const Login = () => {
+const google= ()=>{
+    window.open("http://localhost:5000/auth/google", "_self");
+}
+
+
     return (
         <div>
-            <Navbar />
+            
             <div className=' h-[calc(100vh-60px)] flex items-center justify-center'>
                 {/* <h1 className=' text-center text-[32px] font-bold mb-3'>Choose a login Method</h1> */}
                 <div className=' flex flex-col bg-[#f8f7f4] shadow-md  rounded-md mt-[100px] items-center w-[60%] h-[100%] sm:h-[75%] sm:flex-row'>
-                    <div className='flex-1 flex-col items-center justify-start text-white'>
-                        <div className='flex items-center p-15px w-[175px] bg-[#f03131] h-[70px] rounded-md m-auto mb-2 cursor-pointer hover:bg-transparent hover:text-[#f03131]'>
+                    <div className='flex-1 flex-col items-center justify-start text-white '>
+                        <div onClick={google} className=' duration-500 flex items-center p-15px w-[175px] bg-[#f03131] h-[70px] rounded-md m-auto mb-2 cursor-pointer hover:bg-transparent hover:text-[#f03131]'>
                         <FcGoogle className=' text-[40px]'/>
                         <span className=' text-[30px] pl-[.5rem] '>Google</span></div>
-                        <div className='flex items-center p-15px w-[175px] bg-[#5425c2] h-[70px] rounded-md m-auto mb-2 cursor-pointer hover:bg-transparent hover:text-[#5425c2]'>
+                        <div className='duration-500 flex items-center p-15px w-[175px] bg-[#5425c2] h-[70px] rounded-md m-auto mb-2 cursor-pointer hover:bg-transparent hover:text-[#5425c2]'>
                             <FaFacebook className=' text-[60px]'/>
                         <span className=' text-[30px] pl-[.5rem]' >Facebook</span></div>
-                        <div className='flex items-center p-15px w-[175px] bg-[#242020] h-[70px] rounded-md m-auto cursor-pointer hover:bg-transparent hover:text-[#242020]'>
+                        <div className='duration-500 flex items-center p-15px w-[175px] bg-[#242020] h-[70px] rounded-md m-auto cursor-pointer hover:bg-transparent hover:text-[#242020]'>
                             <BsGithub className=' text-[40px]'/>
                         <span className=' text-[30px] pl-[.5rem]'>Github</span></div>
 
